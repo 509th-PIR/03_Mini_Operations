@@ -1,0 +1,63 @@
+class CfgSounds {
+	sounds[] = {};
+
+	class Erika {
+		name = "Erika";
+        sound[] = {"\music\Erika.ogg", 5, 1};
+        titles[] = {0,""};
+	};
+
+	class Panzerlied {
+		name = "Panzerlied";
+        sound[] = {"\music\Panzerlied.ogg", 5, 1};
+        titles[] = {0,""};
+	};
+
+	class Walde {
+		name = "Walde";
+        sound[] = {"\music\Walde.ogg", 5, 1};
+        titles[] = {0,""};
+	};
+
+	class Westerwald {
+		name = "Westerwald";
+        sound[] = {"\music\Westerwald.ogg", 5, 1};
+        titles[] = {0,""};
+	};
+
+	class Silence {
+		name = "Silence";
+        sound[] = {"\music\Silence.ogg", 5, 1};
+        titles[] = {0,""};
+	};
+};
+
+class CfgFunctions 
+{
+	#include "vcom\cfgFunctions.hpp"
+};
+
+class Extended_PreInit_EventHandlers {
+	class VCM_CBASettings {
+		init = "call VCM_fnc_CBA_Settings";
+	};
+};
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		
+	};
+	
+	
+};
