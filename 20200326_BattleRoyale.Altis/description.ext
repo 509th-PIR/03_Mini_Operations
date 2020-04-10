@@ -1,0 +1,20 @@
+//lootsystem config
+#include "lootsystem\config.cpp"
+
+respawndelay = "3";
+respawnOnStart = 0;
+aikills = 0;
+DisabledAI = true;
+saving=0;
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 64;
+};
+
+author="509th PIR Mission Devolpment Team";
+OnLoadName = "509th Battle Royale";
+OnLoadMission = "Get ready to jump!";
+loadScreen = "images\splash1.jpg"

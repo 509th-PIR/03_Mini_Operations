@@ -1,0 +1,84 @@
+author="509th PIR Mission Dev - SGT. Angel";
+OnLoadName = "ALiVE CLAfghan 509th PIR V0.1";
+OnLoadMission = "ISIS has been plaguing Afghanistan for long enough, you're here to put an end to them.";
+loadScreen = "Media\Splash1.jpg";
+
+class CfgFunctions
+{	
+	#include "vcom\cfgFunctions.hpp"
+};
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 64;
+};
+
+class Extended_PreInit_EventHandlers {
+	class VCM_CBASettings {
+		init = "call VCM_fnc_CBA_Settings";
+	};
+};
+
+class CfgDebriefing
+{  
+    class AdminMod 
+    {
+        title = "Admin/Cheat Mod Detected ";
+        subtitle = "";
+        description = "Remove Admin Mods or vehicle spawn mods, Mods that reveal Enemy and Rejoin Ie Crosscom ect. ";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+	
+	class RestrictedMods
+    {
+        title = "Out of Date/Error producing Mod Detected ";
+        subtitle = "";
+        description = "Remove TF47,BloodLust,Bullet Casings mods,NIArms Minigun, Suitcase Nuke and Ravage due to bugs, and Rejoin. ";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+	
+	class ArsenalMod 
+    {
+        title = "Arsenal Mod Detected ";
+        subtitle = "";
+        description = "Remove Arsenal Mods, and Rejoin. ";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+};
+
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		
+	};
+	
+	
+};
+
+
+
+////// Corpse Manager///////////////////////////////////
+corpseManagerMode = 1; 
+corpseLimit = 15; 
+corpseRemovalMinTime = 60; 
+corpseRemovalMaxTime = 120;
