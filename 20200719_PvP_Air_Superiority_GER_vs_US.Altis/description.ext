@@ -1,0 +1,57 @@
+class CfgMusic {
+	tracks[] = {};
+
+	class GER1 {
+		name = "GER1";
+        sound[] = {"\music\GER1.ogg", 5, 1};
+        
+	};
+
+	class GER2 {
+		name = "GER2";
+        sound[] = {"\music\GER2.ogg", 5, 1};
+        
+	};
+
+	class GER3 {
+		name = "GER3";
+        sound[] = {"\music\GER3.ogg", 5, 1};
+        
+	};
+
+	class US1 {
+		name = "US1";
+        sound[] = {"\music\US1.ogg", 10, 1};
+        
+	};
+
+	class US2 {
+		name = "US2";
+        sound[] = {"\music\US2.ogg", 5, 1};
+        
+	};
+
+	class US3 {
+		name = "US3";
+        sound[] = {"\music\US3.ogg", 5, 1};
+        
+	};
+
+	class USINTRO {
+		name = "USINTRO";
+        sound[] = {"\music\USINTRO.ogg", 5, 1};
+        
+	};
+
+	class GERINTRO {
+		name = "GERINTRO";
+        sound[] = {"\music\GERINTRO.ogg", 5, 1};
+        
+	};
+
+	class Silence {
+		name = "Silence";
+        sound[] = {"\music\Silence.ogg", 5, 1};
+        
+	};
+};
