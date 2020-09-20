@@ -1,0 +1,132 @@
+/*/
+File: description.ext
+Author:
+
+	Michael
+
+Last modified:
+
+	20200509  by Michael
+	
+Description:
+
+	https://community.bistudio.com/wiki/Description.ext
+____________________________________________/*/
+
+#include "CHVD\dialog.hpp" // View Distance
+#include "KPGUI\KPGUI_defines.hpp"
+#include "KPCF\ui\KPCF_dialog.hpp"
+
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 64;
+};
+
+
+author="509th PIR Mission Devopment";
+OnLoadName = "Land Nav Mini Operation";
+OnLoadMission = "You need to escape!";
+loadScreen = "images\splash.jpg"
+
+
+
+enableDebugConsole[] = {"76561198277313876", 
+						"76561198024812575", 
+						"76561198352564029", 
+						"76561198051306330",
+						"76561198168637308", 
+						"76561198125701176"  //Maximum 
+};
+
+
+respawndelay = "3";
+respawnOnStart = 0;
+aikills = 0;
+DisabledAI = true;
+saving=0;
+
+corpseManagerMode = 1; //Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
+corpseLimit = 15; //Max number of bodies which can be available at the same time. When exceeded, start deleting immediately. 
+corpseRemovalMinTime = 60; //Minimal time in seconds a body stays in the scene (can't be removed sooner). 
+corpseRemovalMaxTime = 120; //Maximal time in seconds after which a dead body is removed (can't stay longer)
+
+class CfgFunctions
+{
+	#include "vcom\cfgFunctions.hpp"
+	#include "CHVD\CfgFunctions.hpp"
+	
+};
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		
+	};
+	
+	
+};
+//////////////////// Vcom CBA settings ////////////////////////////////
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
+};
+
+
+/////////////////////////// Anit Cheat Below//////////////////////////////////////////////////////////////
+
+class CfgDebriefing
+{  
+    class AdminMod 
+    {
+        title = "Admin/Cheat Mod Detected ";
+        subtitle = "";
+        description = "Remove Admin Mods or vehicle spawn mods, Mods that reveal Enemy and Rejoin Ie Crosscom ect. ";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+	
+	class RestrictedMods
+    {
+        title = "Out of Date/Error producing Mod Detected ";
+        subtitle = "";
+        description = "Remove TF47,Achilles, gpn18 NVG, @Aspis Gear (Retextures), BloodLust,Bullet Casings mods,NIArms Minigun, Suitcase Nuke and Ravage due to bugs, and Rejoin. ";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+	
+	class ArsenalMod 
+    {
+        title = "Arsenal Mod Detected ";
+        subtitle = "";
+        description = "Remove Arsenal Mods, and Rejoin. ";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+};
+
+
+
+// class CfgDebriefingSections {
+    
+// 	    class acex_killTracker {
+//             title = "Acex Killed Events";
+//             variable = "acex_killTracker_outputText";
+//         };
+// };
+
