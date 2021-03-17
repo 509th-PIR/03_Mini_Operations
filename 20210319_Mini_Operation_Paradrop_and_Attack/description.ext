@@ -1,0 +1,86 @@
+#include "CHVD\dialog.hpp" // View Distance
+#include "KPGUI\KPGUI_defines.hpp"
+#include "KPCF\ui\KPCF_dialog.hpp"
+#include "Unit\Misc.hpp"
+
+/*
+File: description.ext
+Author:
+
+	Michael
+
+Last modified:
+
+	20210509  by Michael
+	
+Description:
+
+	https://community.bistudio.com/wiki/Description.ext
+____________________________________________*/
+
+
+
+
+author="509th PIR Mission Development";
+OnLoadName = "Paradrop and Attack Mini Op";
+OnLoadMission = "Grab a kit and prepare to load onto the C-17 (Need Parachute)";
+loadScreen = "";
+
+class CfgSounds
+{
+ sounds[] = {};
+ class EAS_Warning
+  {
+
+ name = "EAS_Warning";
+ sound[] = {"sound\EAS_Warning.ogg", 1.5,1};
+ titles[] = {};
+ };
+};
+
+class CfgFunctions
+{
+	#include "vcom\cfgFunctions.hpp"
+	#include "CHVD\CfgFunctions.hpp"
+	#include "KPCF\KPCF_functions.hpp"	
+};
+
+class CfgDebriefing{  
+  #include "Unit\Anti_cheat\anti_cheat.hpp"  
+};
+
+//Role selection
+respawnTemplatesWest[] = {"MenuInventory","MenuPosition"};
+class CfgRoles
+{
+	#include "Unit\role_selection\roles.hpp"
+};
+
+class CfgRespawnInventory{
+	#include "Unit\role_selection\Infantry.hpp"
+	#include "Unit\role_selection\Pilots.hpp"
+	#include "Unit\role_selection\support.hpp"
+};
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		
+	};
+};
+
+//////////////////// Vcom CBA settings ////////////////////////////////
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
+};
