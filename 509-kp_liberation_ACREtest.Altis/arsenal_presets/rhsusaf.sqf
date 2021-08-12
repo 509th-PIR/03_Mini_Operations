@@ -844,7 +844,6 @@ GRLIB_arsenal_items = [
     "U_B_T_FullGhillie_tna_F",                                      // Full Ghillie (Jungle) [NATO]
     "U_B_Wetsuit",                                                  // Wetsuit [NATO]
     "V_RebreatherB",                                                // Rebreather [NATO]
-    "Item_Laserdesignator",                                         // Laser Designator 
 
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)

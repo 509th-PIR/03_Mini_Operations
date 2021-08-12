@@ -117,7 +117,7 @@ corpseLimit = 50;
 corpseRemovalMinTime = 300;
 
 // Maximum time a corpse can remain on the ground if total number of corpses is equal or under corpseLimit.
-corpseRemovalMaxTime = 450;
+corpseRemovalMaxTime = 900;
 
 // Sets the mode for wreck removal manager.
 // 0 = None                 - None of the vehicles are managed by the manager
@@ -133,7 +133,7 @@ wreckLimit = 20;
 wreckRemovalMinTime = 300;
 
 // Maximum time a wreck can remain on the ground if total number of wrecks is equal or under wreckLimit.
-wreckRemovalMaxTime = 450;
+wreckRemovalMaxTime = 900;
 
 // The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
 minPlayerDistance = 1000;
@@ -172,7 +172,7 @@ enableDebugConsole = 1;
 // 0 - based on player's options
 // 1 - enabled (advanced mode)
 // 2 - disabled (default flight mode)
-forceRotorLibSimulation = 0;
+forceRotorLibSimulation = 1;
 
 // By default a new player is not auto assigned a free playable slot in the mission lobby in Multiplayer.
 // Disable this setting to make him auto assigned to the side with least players.

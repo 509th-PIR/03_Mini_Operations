@@ -80,21 +80,35 @@ light_vehicles = [
     ["rhsusf_m1025_d",100,0,50],                                        // M1025A2
     ["rhsusf_m1025_d_m2",100,40,50],                                    // M1025A2 (M2)
     ["rhsusf_m1025_d_Mk19",100,60,50],                                  // M1025A2 (Mk19)
-    ["rhsusf_m1045_d",100,100,50],                                      // M1045A2 (TOW)
-    ["rhsusf_m1165a1_gmv_m2_m240_socom_d",120,200,70],                  // M1165A1 (M2/2x M240)
-    ["rhsusf_m1165a1_gmv_mk19_m240_socom_d",120,250,70],                // M1165A1 (Mk19/2x M240)
-    ["rhsusf_m1165a1_gmv_m134d_m240_socom_d",120,350,70],               // M1165A1 (M134/2x M240)
-    ["rhsusf_M1230a1_usarmy_d",120,0,60],                               // M1230A1
-    ["rhsusf_m1240a1_m2crows_usarmy_d",120,40,60],                      // M1240A1 (M2 CROWS)
-    ["rhsusf_m1240a1_mk19crows_usarmy_d",120,80,60],                    // M1240A1 (Mk19 CROWS)
-    ["rhsusf_M978A4_BKIT_usarmy_d",140,0,100],                          // M978A4 BKit (Refuel)
-    ["rhsusf_M977A4_REPAIR_BKIT_usarmy_d",200,0,60],                    // M977A4 BKit (Repair)
-    ["rhsusf_M977A4_AMMO_BKIT_usarmy_d",130,150,60],                    // M977A4 BKit (Ammo)
+    ["rhsusf_m998_d_2dr_fulltop",100,0,50],                             // M1097A2 (2D)
+    ["rhsusf_m998_d_2dr_halftop",100,0,50],                             // M1097A2 (2D / open back)
+    ["rhsusf_M1220_usarmy_d",120,0,60],                                 // M1220
+    ["rhsusf_M1220_M2_usarmy_d",120,40,60],                             // M1220 (M2)
+    ["rhsusf_M1220_MK19_usarmy_d",120,60,60],                           // M1220 (Mk19)
+    ["rhsusf_M1220_M153_M2_usarmy_d",140,40,60],                        // M1220 (M2 CROWS)
+    ["rhsusf_M1220_M153_MK19_usarmy_d",140,60,60],                      // M1220 (Mk19 CROWS)
+    ["rhsusf_M1238A1_socom_d",130,0,60],                                // M1238
+    ["rhsusf_M1238A1_M2_socom_d",130,40,60],                            // M1238 (M2)
+    ["rhsusf_M1238A1_Mk19_socom_d",130,60,60],                          // M1238 (Mk19)
+    ["rhsusf_M1232_usarmy_d",140,0,60],                                 // M1232
+    ["rhsusf_M1232_M2_usarmy_d",140,40,60],                             // M1232 (M2)
+    ["rhsusf_M1232_MK19_usarmy_d",140,60,60],                           // M1232 (Mk19)
+    ["rhsusf_M1230a1_usarmy_d",120,0,60],                               // M1230A1 (MEDEVAC)
+    ["rhsusf_M1083A1P2_D_open_fmtv_usarmy",125,0,75],                   // M1083A1P2 Transport
+    ["rhsusf_M1083A1P2_D_fmtv_usarmy",125,0,75],                        // M1083A1P2 Transport (Covered)
+    ["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy",100,0,50],                // M1083A1P2
+    ["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],                           // M977A4 BKIT
+    ["rhsusf_M977A4_BKIT_M2_usarmy_d",125,40,75],                       // M977A4 BKIT (HMG)
+    ["rhsusf_M1239_socom_d",135,0,75],                                  // M1239 AUV
+    ["rhsusf_M1239_M2_socom_d",135,80,75],                              // M1239 AUV (M2 CROWS)
+    ["rhsusf_M1239_MK19_socom_d",135,160,75],                           // M1239 AUV (Mk19 CROWS)
+    ["rhsusf_M1117_D",150,100,50],                                      // M1117 ASV
     ["B_UGV_01_F",150,0,50],                                            // UGV Stomper
     ["B_UGV_01_rcws_F",150,40,50],                                      // UGV Stomper (RCWS)
     ["B_Boat_Transport_01_F",100,0,25],                                 // Assault Boat
     ["B_Boat_Armed_01_minigun_F",200,80,75],                            // Speedboat Minigun
     ["rhsusf_mkvsoc",250,200,100],                                      // Mk.V SOCOM
+    ["B_SDV_01_F",150,0,50]                                             // SDV
 ];
 
 heavy_vehicles = [
@@ -112,10 +126,16 @@ heavy_vehicles = [
 
 air_vehicles = [
     ["B_UAV_01_F",75,0,25],                                             // AR-2 Darter
+    ["B_UAV_06_F",80,0,30],                                             // AL-6 Pelican (Cargo)
     ["RHS_MELB_MH6M",200,0,100],                                        // MH-6M Little Bird
     ["RHS_MELB_AH6M",200,200,100],                                      // AH-6M Pawnee
-    ["vtx_MH60S_GAU21L",250,280,150],                                   // UH-60M GAU 21
-    ["vtx_MH60M_DAP",300,400,150],                                      // UH-60M DAP
+    ["RHS_UH1Y_UNARMED_d",225,0,125],                                   // UH-1Y (Unarmed)
+    ["RHS_UH1Y_d_GS",225,200,125],                                      // UH-1Y (Ground Suppression)
+    ["RHS_AH1Z",500,500,200],                                           // AH-1Z (Multi-Role)
+    ["RHS_AH64D",750,750,250],                                          // AH-64D (Multi-Role)
+    ["RHS_UH60M2_d",250,0,150],                                         // UH-60M (Unarmed)
+    ["RHS_UH60M_d",250,80,150],                                         // UH-60M
+    ["RHS_UH60M_MEV2_d",300,0,150],                                     // UH-60M MEV2
     ["RHS_CH_47F_10",275,80,175],                                       // CH-47 Chinook (Armed)
     ["rhsusf_CH53E_USMC_D",300,0,175],                                  // CH-53E Super Stallion
     ["rhsusf_CH53E_USMC_GAU21_D",300,100,175],                          // CH-53E Super Stallion (GAU-21)
@@ -141,8 +161,11 @@ air_vehicles = [
     ["USAF_F22_Heavy",1800,2250,500],                                   // F-22A Raptor (Heavy)
     ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
     ["USAF_F35A",2250,2250,750],                                        // F-35A Lightning II (Heavy)
-    ["USAF_AC130U",750,1500,500],                                       // USAF AC-130
-    
+    ["B_Plane_Fighter_01_F",1500,1750,450],                             // F/A-181 Black Wasp II
+    ["B_Plane_Fighter_01_Stealth_F",1500,1750,450],                     // F/A-181 Black Wasp II (Stealth)
+    ["B_T_VTOL_01_armed_F",750,1500,500],                               // V-44 X Blackfish (Armed)
+    ["B_T_VTOL_01_infantry_F",750,0,500],                               // V-44 X Blackfish (Infantry)
+    ["B_T_VTOL_01_vehicle_F",750,0,500]                                 // V-44 X Blackfish (Vehicle)
 ];
 
 static_vehicles = [
@@ -373,7 +396,7 @@ elite_vehicles = [
     "rhsusf_m1a1aim_tuski_d",                                           // M1A1SA (Tusk I)
     "rhsusf_m1a2sep1tuskiid_usarmy",                                    // M1A2SEPv1 (Tusk II)
     "rhsusf_m109d_usarmy",                                              // M109A6
-    "vtx_MH60S_GAU21L",                                                 // MH-60S GAU 21
+    "RHS_AH64D",                                                        // AH-64D (Multi-Role)
     "B_UAV_02_dynamicLoadout_F",                                        // MQ-4A Greyhawk
     "B_T_UAV_03_dynamicLoadout_F",                                      // MQ-12 Falcon
     "B_UAV_05_F",                                                       // UCAV Sentinel
@@ -391,5 +414,7 @@ elite_vehicles = [
     "FIR_F15E",                                                         // F-15E Strike Eagle
     "JS_JC_FA18E",                                                      // F/A-18 E Super Hornet
     "JS_JC_FA18F",                                                      // F/A-18 F Super Hornet
-    "USAF_AC130U"                                                       // USAF AC-130
+    "B_Plane_Fighter_01_F",                                             // F/A-181 Black Wasp II
+    "B_Plane_Fighter_01_Stealth_F",                                     // F/A-181 Black Wasp II (Stealth)
+    "B_T_VTOL_01_armed_F"                                               // V-44 X Blackfish (Armed)
 ];

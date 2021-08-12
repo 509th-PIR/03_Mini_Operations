@@ -27,13 +27,13 @@ class Params {
         title = $STR_PARAMS_DIFFICULTY;
         values[] = {0, 1, 2, 3, 4, 5, 6, 7};
         texts[] = {$STR_PARAMS_DIFFICULTY1, $STR_PARAMS_DIFFICULTY2, $STR_PARAMS_DIFFICULTY3, $STR_PARAMS_DIFFICULTY4, $STR_PARAMS_DIFFICULTY5, $STR_PARAMS_DIFFICULTY6, $STR_PARAMS_DIFFICULTY7, $STR_PARAMS_DIFFICULTY8};
-        default = 4;
+        default = 2;
     };
     class Aggressivity {
         title = $STR_AGGRESSIVITY_PARAM;
         values[] = {0, 1, 2, 3, 4};
         texts[] = {$STR_AGGRESSIVITY_PARAM0, $STR_AGGRESSIVITY_PARAM1, $STR_AGGRESSIVITY_PARAM2, $STR_AGGRESSIVITY_PARAM3, $STR_AGGRESSIVITY_PARAM4};
-        default = 3;
+        default = 2;
     };
     class AdaptToPlayercount {
         title = $STR_PARAM_ADAPT_TO_PLAYERCOUNT;
@@ -63,7 +63,7 @@ class Params {
         title = $STR_PARAM_FOBS_COUNT;
         values[] = {3, 5, 7, 10, 15, 20, 26};
         texts[] = {3, 5, 7, 10, 15, 20, 26};
-        default = 20;
+        default = 10;
     };
     class MaxSquadSize {
         title = $STR_PARAM_SQUAD_SIZE;
@@ -93,7 +93,7 @@ class Params {
         title = $STR_SHORTER_NIGHTS_PARAM;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 1;
+        default = 0;
     };
     class Weather {
         title = $STR_WEATHER_PARAM;
@@ -105,7 +105,7 @@ class Params {
         title = $STR_FOG_PARAM;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
+        default = 1;
     };
     class ResourcesMultiplier {
         title = $STR_PARAMS_RESOURCESMULTIPLIER;
@@ -153,7 +153,7 @@ class Params {
         title = $STR_A3_ReviveMode;
         values[] = {0, 1};
         texts[] = {$STR_A3_Disabled, $STR_A3_EnabledForAllPlayers};
-        default = 0;
+        default = 1;
     };
     class ReviveDuration {
         title = $STR_A3_ReviveDuration;
@@ -225,7 +225,7 @@ class Params {
         title = $STR_PARAMS_ARSENALUSEPRESET;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_NORESTRICTIONS, $STR_PARAMS_USEPRESET};
-        default = 1;
+        default = 0;
     };
     class MapMarkers {
         title = $STR_PARAMS_MAPMARKERS;
@@ -357,19 +357,19 @@ class Params {
         title = $STR_PARAMS_INTRO;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
+        default = 1;
     };
     class DeploymentCinematic {
         title = $STR_PARAMS_DEPLOYMENTCAMERA;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
+        default = 1;
     };
     class Whitelist {
         title = $STR_WHITELIST_PARAM;
         values[] = {1, 0};
         texts[] = {$STR_WHITELIST_ENABLED, $STR_PARAMS_DISABLED};
-        default = 1;
+        default = 0;
     };
     class ServerRestart {
         title = $STR_RESTART_PARAM;
